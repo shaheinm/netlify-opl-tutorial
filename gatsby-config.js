@@ -6,5 +6,22 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsconfig: {
+          fonts: {
+            google: [
+              {
+                family: `Montserrat`,
+                variants: [`300`, `400`, `500`, `600`, `700`],
+              },
+            ],
+          },
+        },
+      },
+    },
+  ],
 }
